@@ -1,0 +1,29 @@
+/* src/app/core/footer/footer.component.css */
+
+.app-footer {
+    background-color: #000000;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    color: var(--primary-green);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.footer-logo img {
+    height: 100px; 
+    margin-right: 5px;
+}
+
+.copyright-text {
+    color: #777;
+    font-size: 0.8rem;
+    margin: 0;
+}

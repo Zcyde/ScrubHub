@@ -1,0 +1,44 @@
+/* 1. Header & Navigation Styling */
+/* ==================================== */
+
+.home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    position: absolute; /* Place it over the Hero section */
+    width: 100%;
+    z-index: 10; /* Ensure it stays above the car image */
+    background-color: #000000;
+}
+
+.home-header .logo img {
+    height: 100px;
+    width: auto;
+}
+
+/* Separator Pipe (|) using pseudo-element */
+.home-header nav a:not(:last-child)::after {
+    content: "|";
+    color: #ffffff; /* Darker pipe color for better contrast/subtlety */
+    margin-left: 15px;
+    position: relative;
+    right: -15px; /* Adjust based on padding to position the pipe */
+}
+
+.home-header nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    color: #fff;
+}
+
+.home-header nav a:hover,
+.home-header nav a.active {
+    color: var(--primary-green);
+    border-bottom: 2px solid var(--primary-green);
+}

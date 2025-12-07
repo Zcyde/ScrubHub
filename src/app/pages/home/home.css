@@ -1,0 +1,148 @@
+/* --- Global Variables and Colors --- */
+:root {
+    --primary-green: #007000; /* Darker green for text/accents */
+    --primary-dark: #1a1a1a;
+    --text-light: #f0f0f0;
+    --text-dark: #444;
+    --button-bg: #8cff00; /* Neon/Lighter green for the button */
+}
+
+/* Helper Class for Text Color */
+.green-text {
+    color: var(--primary-green) !important;
+}
+
+/* ==================================== */
+/* 2. Hero Section (Image & Title) */
+/* ==================================== */
+.hero-section {
+    /* Use the provided image path here */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), 
+                url('../../../../public/Home-Hero.jpg') no-repeat center center; 
+    background-size: cover;
+    background-position: center 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh; /* Set a height for the section */
+    text-align: center;
+    color: white;
+    padding-top: 60px; /* Offset for the fixed header */
+}
+
+.hero-overlay h2 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+    letter-spacing: 5px;
+}
+
+.view-services-button {
+    display: inline-block;
+    background-color: var(--button-bg);
+    color: var(--primary-dark);
+    text-decoration: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+    margin-top: 450px;
+}
+
+.view-services-button:hover {
+    background-color: #72e600;
+}
+
+/* ==================================== */
+/* 3. Content Sections (ABOUT & MISSION) */
+/* ==================================== */
+/* About */
+.about-section {
+     background-color: black;
+    color: var(--text-dark);
+    padding: 80px 10%; 
+    text-align: center;
+}
+
+.about-section h2{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+    color: #B9F96F;
+}
+
+.about-section p {
+    font-size: 1.25rem; 
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto; 
+    color: #fff;
+}
+
+/* Mission */
+.mission-section {
+    background-color: #000000; /* Slight contrast for the mission section */
+    color: var(--text-dark);
+     padding: 80px 10%; 
+    text-align: center;
+}
+
+.mission-section h2{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+    color: #B9F96F;
+}
+
+.mission-section p {
+    font-size: 1.25rem; /* Larger, readable body text */
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto; /* Center the paragraph text */
+    color: #fff;
+}
+
+/* ==================================== */
+/* 4. Footer (Basic structure) */
+/* ==================================== */
+.footer {
+    padding: 20px;
+    background-color: var(--primary-dark);
+    color: #777;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* --- Media Query for Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .home-header {
+        flex-direction: column;
+        padding: 10px;
+        position: static; /* Make header static on mobile */
+    }
+
+    .home-header nav a {
+        margin: 0 10px;
+        font-size: 1rem;
+    }
+
+    .hero-section {
+        height: 60vh;
+        padding-top: 20px;
+    }
+    
+    .hero-overlay h2 {
+        font-size: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .content-section {
+        padding: 40px 5%;
+    }
+}
