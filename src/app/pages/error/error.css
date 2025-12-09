@@ -1,0 +1,60 @@
+/* Full-screen wrapper */
+.error-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #0d0d0d; /* Dark background */
+  font-family: 'Instrument Sans', sans-serif;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Content box with subtle shadow */
+.error-content {
+  background: rgba(30, 30, 30, 0.85);
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Big 404 number */
+.error-content h1 {
+  font-size: 8rem;
+  margin: 0;
+  color: #4caf50; /* Accent color */
+}
+
+/* Subtitle */
+.error-content h2 {
+  font-size: 2rem;
+  margin: 20px 0 10px;
+  color: #ffffff;
+}
+
+/* Description text */
+.error-content p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #cccccc;
+}
+
+/* Home button */
+.home-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #4caf50;
+  color: #0d0d0d;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.home-btn:hover {
+  background-color: #45a049;
+  transform: translateY(-3px);
+}
