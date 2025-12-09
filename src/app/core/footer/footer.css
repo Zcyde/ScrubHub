@@ -5,6 +5,7 @@
     padding: 20px 0;
     text-align: center;
     border-top: 1px solid #333;
+    font-family: 'Instrument Sans', sans-serif;
 }
 
 .footer-logo {
@@ -18,7 +19,8 @@
 }
 
 .footer-logo img {
-    height: 100px; 
+    margin-bottom: -40px;
+    height: 200px; 
     margin-right: 5px;
 }
 
