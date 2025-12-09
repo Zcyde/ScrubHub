@@ -1,44 +1,123 @@
-/* 1. Header & Navigation Styling */
-/* ==================================== */
+/* ---------- GLOBAL FIX FOR OVERFLOW ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Adjust header height easily here */
+:root {
+  --header-height: 100px;
+  --primary-green: #00ff6a; /* Added to ensure color works */
+}
+
+/* ---------- HEADER & NAVIGATION ---------- */
 .home-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    background-color: var(--primary-dark);
-    color: var(--text-light);
-    position: absolute; /* Place it over the Hero section */
-    width: 100%;
-    z-index: 10; /* Ensure it stays above the car image */
-    background-color: #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: #000;
+  z-index: 1000;
+  gap: 20px;
 }
 
+/* Logo */
+.home-header .logo {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+/* Bigger logo — does NOT affect header height */
 .home-header .logo img {
-    height: 100px;
-    width: auto;
+  height: 110px;
+  width: auto;
+  object-fit: contain;
+  margin-top: -8px;
 }
 
-/* Separator Pipe (|) using pseudo-element */
-.home-header nav a:not(:last-child)::after {
-    content: "|";
-    color: #ffffff; /* Darker pipe color for better contrast/subtlety */
-    margin-left: 15px;
-    position: relative;
-    right: -15px; /* Adjust based on padding to position the pipe */
+/* Navigation */
+.home-header nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 30px;
+  flex-wrap: nowrap;
 }
 
+/* Nav Links + Separator Pipes */
 .home-header nav a {
-    color: var(--text-light);
-    text-decoration: none;
-    margin-left: 30px;
-    font-size: 1.1rem;
-    transition: color 0.3s;
-    color: #fff;
+  color: #ffffff; /* ← Always visible now */
+  text-decoration: none;
+  font-size: 1.08rem;
+  font-weight: 600;
+  white-space: nowrap;
+  padding: 6px 18px 6px 0;
+  border-right: 1px solid #ffffff70;
+  transition: color 0.25s, border-color 0.25s, border-bottom-color 0.25s;
 }
 
+/* Remove pipe on last link */
+.home-header nav a:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+/* Hover + Active Effect - FORCE apply */
 .home-header nav a:hover,
 .home-header nav a.active {
-    color: var(--primary-green);
-    border-bottom: 2px solid var(--primary-green);
+  color: #00ff6a !important; /* force green text */
+  border-bottom: 2px solid #00ff6a !important; /* underline visible */
+}
+
+/* ---------- HERO FIX (NAV SPACING) ---------- */
+.hero-section {
+  padding-top: calc(var(--header-height) + 20px);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 992px) {
+  :root { --header-height: 90px; }
+
+  .home-header {
+    padding: 10px 25px;
+  }
+
+  .home-header .logo img {
+    height: 85px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root { --header-height: 72px; }
+
+  .home-header {
+    padding: 8px 18px;
+    height: var(--header-height);
+  }
+
+  .home-header .logo img {
+    height: 60px;
+  }
+
+  .home-header nav {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .hero-section {
+    padding-top: calc(var(--header-height) + 10px);
+  }
 }

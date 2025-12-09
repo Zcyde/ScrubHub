@@ -1,0 +1,37 @@
+.contact-hero {
+    padding: 60px 40px;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9));
+  }
+
+  .contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 40px;
+  }
+
+  .contact-title {
+    color: #b4ff64;
+    font-size: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .contact-card {
+    background: rgba(255,255,255,0.95);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .contact-subheading {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .contact-info {
+    font-size: 18px;
+    color: #666;
+  }
