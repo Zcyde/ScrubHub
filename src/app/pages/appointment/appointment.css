@@ -1,0 +1,70 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;700&display=swap');
+
+body {
+  background-color: #000 !important;
+  font-family: "Instrument Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page Layout */
+.appointment-container {
+  min-height: calc(100vh - 150px);
+  padding: 50px 30px;
+  color: #fff;
+  text-align: center;
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #12ff85;
+  margin-bottom: 35px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Table Wrapper */
+.table-wrapper {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start; /* prevents vertical stretching */
+  width: 100%;
+}
+
+/* Table */
+.appointment-table {
+  width: 90%;
+  max-width: 1100px;
+  background: #121212;
+  border-radius: 15px;
+  border-collapse: collapse;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+/* Header Styles */
+.appointment-table th {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 20px;
+  background: #1e1e1e;
+  border-bottom: 2px solid #2e2e2e;
+  color: #00ff88;
+  text-transform: uppercase;
+}
+
+/* Data Cells */
+.appointment-table td {
+  padding: 18px;
+  font-size: 18px;
+  border-bottom: 1px solid #2e2e2e;
+  color: #e6e6e6;
+}
+
+/* Hover Effect */
+.appointment-table tr:hover {
+  background: rgba(0, 255, 136, 0.08);
+  transition: 0.2s ease-in-out;
+}

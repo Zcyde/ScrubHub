@@ -1,1 +1,18 @@
-<p>services works!</p>
+<section class="services-header">
+  <h1>OUR SERVICES</h1>
+  <p>Explore our range of professional carwash and detailing services.</p>
+</section>
+
+<div class="services-grid">
+  <div class="service-card" *ngFor="let s of services">
+    <h2>{{ s.title }}</h2>
+    <ul>
+      <li *ngFor="let d of s.details">{{ d }}</li>
+    </ul>
+
+    <div class="price-section">
+      <span class="price">₱{{ s.price }}</span>
+      <button class="avail-btn">Avail</button>
+    </div>
+  </div>
+</div>

@@ -13,8 +13,8 @@ html, body {
 
 /* Adjust header height easily here */
 :root {
-  --header-height: 100px;
-  --primary-green: #00ff6a; /* Added to ensure color works */
+  --header-height: 65px;
+  --primary-green: #B9F96F; /* Added to ensure color works */
 }
 
 /* ---------- HEADER & NAVIGATION ---------- */
@@ -23,13 +23,15 @@ html, body {
   top: 0;
   left: 0;
   width: 100%;
+  max-width: 100vw;
   height: var(--header-height);
   display: flex;
   align-items: center;
-  padding: 10px 40px;
+  padding: 5px 20px;
   background-color: #000;
   z-index: 1000;
   gap: 20px;
+  overflow: hidden;
 }
 
 /* Logo */
@@ -41,10 +43,10 @@ html, body {
 
 /* Bigger logo — does NOT affect header height */
 .home-header .logo img {
-  height: 110px;
+  height: 150px;
   width: auto;
   object-fit: contain;
-  margin-top: -8px;
+  margin-top: 0;
 }
 
 /* Navigation */
@@ -54,6 +56,8 @@ html, body {
   margin-left: auto;
   gap: 30px;
   flex-wrap: nowrap;
+  font-family: 'Instrument Sans', sans-serif;
+  overflow: hidden;
 }
 
 /* Nav Links + Separator Pipes */
@@ -83,7 +87,7 @@ html, body {
 
 /* ---------- HERO FIX (NAV SPACING) ---------- */
 .hero-section {
-  padding-top: calc(var(--header-height) + 20px);
+  padding-top: calc(var(--header-height) + 10px);
 }
 
 /* ---------- RESPONSIVE ---------- */

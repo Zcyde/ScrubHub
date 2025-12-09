@@ -1,0 +1,112 @@
+.services-header h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.services-header p {
+  font-family: "instrument Sans";
+  font-size: 30px;
+  margin: 8px auto;
+  max-width: 600px;
+  opacity: 0.9;
+}
+
+/* GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Force 2 columns */
+  gap: 24px;
+  padding: 40px 80px; /* Extra spacing left & right */
+}
+
+/* CARD */
+.service-card {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.18);
+  transition: 0.3s ease;
+}
+
+.service-card h2 {
+  font-family: "instrument Sans";
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.service-card ul {
+  font-family: "instrument Sans";
+  padding-left: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.price {
+  font-size: 26px;
+  font-weight: 800;
+  color: #0c3b29;
+}
+
+.avail-btn {
+  background: #000000;
+  color: white;
+  padding: 10px 80px;
+  font-size: 30px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.services-header {
+  font-family: "instrument Sans";
+  position: relative;
+  text-align: center;
+  padding: 160px 0 300px 80px; /* More space at top + left alignment */
+  color: white;
+  background: url('/services-bg.jpg') center 35% / cover no-repeat;
+  border-radius: 0 0 40px 40px;
+}
+
+/* Dark overlay for readability */
+.services-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  border-radius: inherit;
+}
+
+/* Bring text above overlay */
+.services-header h1,
+.services-header p {
+  position: relative;
+  z-index: 2;
+}
+
+.services-header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.8);
+}
+
+.services-header p {
+  max-width: 600px;
+  margin: 16px auto 0;
+}
+
+
+.service-card:hover {
+  transform: translateY(-6px);
+  transition: 0.3s;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
